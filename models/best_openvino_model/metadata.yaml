@@ -1,0 +1,14 @@
+description: Ultralytics best model trained on data/truckData.yaml
+author: Ultralytics
+license: AGPL-3.0 https://ultralytics.com/license
+date: '2023-11-04T11:29:30.410995'
+version: 8.0.206
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: truck_full
+  1: truck_empty
