@@ -3,16 +3,10 @@ from cap_from_youtube import cap_from_youtube
 
 from yolov8 import YOLOv8
 
-# # Initialize video
-#cap = cv2.VideoCapture('./models/test_video.mp4')
 cap = cv2.VideoCapture('rtsp://127.0.0.1:554/stream')
 start_time = 5  # skip first {start_time} seconds
 cap.set(cv2.CAP_PROP_POS_FRAMES, start_time * cap.get(cv2.CAP_PROP_FPS))
 
-# out = cv2.VideoWriter('output.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), cap.get(cv2.CAP_PROP_FPS), (3840,
-# 2160))
-
-# Initialize YOLOv7 model
 model_path = "./models/best.onnx"
 yolov8_detector = YOLOv8(model_path, conf_thres=0.5, iou_thres=0.5)
 
@@ -54,6 +48,3 @@ while cap.isOpened():
     print('executed frames:' + str(executedFrameCount))
     combined_img = yolov8_detector.draw_detections(frame)
     cv2.imshow("Detected Objects", combined_img)
-    # out.write(combined_img)
-
-# out.release()
