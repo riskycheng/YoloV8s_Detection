@@ -1,7 +1,7 @@
 {
   "?rtsp_address": "the address could be either video path or rtsp address",
   "rtsp_address": "rtsp://127.0.0.1:554/stream",
-  "frames_execute_per_second": 1,
+  "frames_execute_per_second": 25,
   "?min_compute_queue_length": "the internal queue used for voting for the most candidate result in one specific length",
   "min_compute_queue_length": 10,
   "?min_scale_factor": "with min_compute_queue_length, only when the target occupation excceeds this thresh will be voted out",
@@ -9,5 +9,13 @@
   "?clear_global_queue_reaching_empty_det_length": "clear the above queue when reaching continuous empty detections to avoid shaky result",
   "clear_global_queue_reaching_empty_det_length": 10,
   "?conf_threshold": "all object below this threshold will be ignored",
-  "conf_threshold": 0.3
+  "conf_threshold": 0.3,
+  "left_top_x": 600,
+  "left_top_y": 200,
+  "right_top_x": 700,
+  "right_top_y": 200,
+  "left_bottom_x": 400,
+  "left_bottom_y": 700,
+  "right_bottom_x": 800,
+  "right_bottom_y": 700
 }
