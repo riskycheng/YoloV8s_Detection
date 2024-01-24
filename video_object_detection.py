@@ -1,5 +1,4 @@
 import cv2
-from cap_from_youtube import cap_from_youtube
 from ConfigManager import ConfigManager
 from yolov8 import YOLOv8
 import numpy as np
