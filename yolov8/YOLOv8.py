@@ -8,7 +8,7 @@ from yolov8.utils import xywh2xyxy, draw_detections, multiclass_nms
 
 class YOLOv8:
 
-    def __init__(self, path, conf_thres=0.7, iou_thres=0.5):
+    def __init__(self, path, conf_thres=0.30, iou_thres=0.5):
         self.conf_threshold = conf_thres
         self.iou_threshold = iou_thres
 
